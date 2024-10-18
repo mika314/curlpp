@@ -47,3 +47,10 @@ auto Curl::perform() -> CURLcode
 {
   return curl_easy_perform(curl);
 }
+
+auto Curl::getResponseCode() -> long
+{
+  auto httpCode = long{};
+  curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &httpCode);
+  return httpCode;
+}
