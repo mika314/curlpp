@@ -64,3 +64,8 @@ auto Curl::setMaxRedirs(long v) -> void
 {
   curl_easy_setopt(curl, CURLOPT_MAXREDIRS, v);
 }
+
+auto Curl::setTimeout(long v) -> void
+{
+  curl_easy_setopt(curl, CURLOPT_TIMEOUT, v);
+}

@@ -16,6 +16,7 @@ public:
   auto setHeaders(const std::vector<std::string> &) -> void;
   auto setMaxRedirs(long) -> void;
   auto setPostFields(const std::string &) -> void;
+  auto setTimeout(long) -> void;
   auto setUrl(const std::string &) -> void;
 
   using WriteFunc = std::function<auto(const char *content, size_t size)->size_t>;
