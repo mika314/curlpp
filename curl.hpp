@@ -12,7 +12,9 @@ public:
   ~Curl();
   auto getResponseCode() -> long;
   auto perform() -> CURLcode;
+  auto setFollowLocations(long) -> void;
   auto setHeaders(const std::vector<std::string> &) -> void;
+  auto setMaxRedirs(long) -> void;
   auto setPostFields(const std::string &) -> void;
   auto setUrl(const std::string &) -> void;
 

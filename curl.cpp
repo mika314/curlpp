@@ -54,3 +54,13 @@ auto Curl::getResponseCode() -> long
   curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &httpCode);
   return httpCode;
 }
+
+auto Curl::setFollowLocations(long v) -> void
+{
+  curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, v);
+}
+
+auto Curl::setMaxRedirs(long v) -> void
+{
+  curl_easy_setopt(curl, CURLOPT_MAXREDIRS, v);
+}
